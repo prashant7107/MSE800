@@ -1,8 +1,9 @@
+# Global variable
 student_records = []
 
 class StudentRegister:
     def input_student(self, count=3):
-        """Function to collect data"""
+        #   Function to collect data
         global student_records
 
         print(f"Enter data for student {count}")
@@ -23,15 +24,13 @@ class StudentRegister:
         sorted_data = sorted(student_records, key=lambda x: x['name'])
         print("\n--- Sorted Student List ---")
         for student in sorted_data:
-            print(f"Name: {student['name']} | Age: {student['age']}")
+            print(f"Name: {student['name']} | Age: {student['age']} | Id: {student['id']}")
 
 
-def main():
+# Entry Point
+if __name__ == "__main__":  
     manager = StudentRegister()
     
     manager.input_student(3)
     
     manager.print_student()
-
-
-main()
