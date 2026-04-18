@@ -22,9 +22,9 @@ class StudentRegister:
 
     def print_student(self):
         sorted_data = sorted(student_records, key=lambda x: x['age'])
-        print("\n--- Sorted Student List ---")
+        print("\n--- Sorted Student List based on age---")
         for student in sorted_data:
-            print(f"Name: {student['name']} | Age: {student['age']} | Id: {student['id']}")
+            print(f"Name: {student['name']} | Age: {student['age']}")
 
 
 # Entry Point
