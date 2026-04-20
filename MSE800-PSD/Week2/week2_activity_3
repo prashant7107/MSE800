@@ -1,0 +1,76 @@
+import math
+
+#A class to perform various basic mathematical operations
+class BasicOperations:
+
+    def __init__(self,a,b):
+        self.a=a
+        self.b=b
+    
+    #Method 1 : Perform addition, substraction and multiplication
+    def operations(self):
+        return {
+            "Sum ": self.a+self.b,
+            "Difference":self.a-self.b,
+            "Multiplication":self.a*self.b
+            }
+    
+    #Method 2 : Perform division, show quotient and remainder
+    def division(self):
+        return {
+            "Quotient":self.a//self.b,
+            "Remained":self.a%self.b
+            }
+    
+    #Method 3 : Factorial of a given number
+    def factorial(self):
+        return math.factorial(int(self.a))
+    
+    #Method 4 : Find greater of the two numbers
+    def greater_num(self):
+        return max(self.a,self.b)
+
+#Function 1 : Get inputs from user
+def get_numbers():
+    try:
+        num1 = float(input("Enter first number (a): "))
+        num2 = float(input("Enter second number (b): "))
+        return num1, num2
+    except ValueError:
+        print("Invalid input. Please enter numeric values.")
+        return None, None
+
+#Function 2 : Get inputs from user complex numbers
+def get_complex_numbers():
+    try:
+        num1 = float(input("Enter real part of first number: "))
+        num2 = float(input("Enter imaginary part of first number: "))
+        num3 = float(input("Enter real part of second number: "))
+        num4 = float(input("Enter imaginary part of second number: "))
+        z1 = complex(num1, num2)
+        z2 = complex(num3, num4)
+        return z1, z2
+    except ValueError:
+        print("Invalid input. Please enter numeric values.")
+        return None, None
+
+# Function 3 : Main program execution
+def main():
+    a,b=get_numbers()
+
+    calc=BasicOperations(a,b)
+
+    print("\n Results")
+    print(f"Basic Operations : {calc.operations()}")
+    print(f"Division {calc.division()}")
+    print(f"Factorial of 'a' {a} : {calc.factorial()}")
+    print(f"Greater of the two numbers is : {calc.greater_num()}")
+
+    z1,z2=get_complex_numbers()
+    print(f"First complex number is {z1}")
+    print(f"Second complex number is {z2}")
+    print(f"Sum of complex numbers is {z1+z2}")
+    print(f"Product of complex numbers is {z1*z2}")
+
+if __name__ == "__main__":
+    main()
