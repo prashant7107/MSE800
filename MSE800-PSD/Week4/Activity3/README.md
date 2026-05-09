@@ -10,7 +10,7 @@ This diagram illustrates the flow of a currency exchange transaction. It explain
  The staff member responsible for verifying the customer's identity, performing the conversion, and providing receipt for the transaction.
 
 # Diagram 2: System Administrator
-## Purpose:
+## Purpose: 
 This diagram outlines the administrative and backend functions necessary to maintain the money exchange system. It explains crucial tasks such as configuring exchange rates, branch details as well as analysis of data.
 
 ## Key Actors:
