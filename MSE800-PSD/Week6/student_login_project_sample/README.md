@@ -9,7 +9,7 @@ This contains tasks to be performed.
 This is the entry point.
 
 ## FLow of the program
-The programs starts in main.py , after reaching student_login("Mohammad") because the function has decorator @log_activity , the process continues to decorator. It continues to the wrapper. the result = func(*args, kwargs) send flow back to user, where it performs the action inside the function in this case "Mohammad logged into the system.", then the flow comes back to the program.  
+The programs starts in main.py , after reaching student_login("Mohammad") because the function has decorator @log_activity , the process continues to decorator. It continues to the wrapper. 
 
 The flow executes once for student_login, submit_assignment and view_grades.
 
