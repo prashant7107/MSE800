@@ -1,5 +1,6 @@
+from abc import ABC, abstractmethod
 # FISH CLASSES
-class Fish:
+class Fish(ABC):
     def __init__(self, category: str):
         self.category = category
 

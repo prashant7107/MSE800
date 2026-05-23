@@ -1,6 +1,6 @@
 from fish import Fish,Angelfish,Goldfish,Salmon,Shark,Tuna
 
-class FishFactory:
+class FishFactory():
     @staticmethod
     def create_fish(fish_type: str):
         """
