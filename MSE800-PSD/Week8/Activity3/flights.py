@@ -74,7 +74,7 @@ class DomesticFlight(Flight):
 
     # Subclass Specific Method
     
-    def apply_domestic_discount(self) -> None:
+    def apply_domestic_discount(self):
         # Reduces the base price of the domestic flight.
         discount_amount = self._base_price * 0.15
         self._base_price -= discount_amount
@@ -82,8 +82,7 @@ class DomesticFlight(Flight):
 
     #  Overridden Methods 
 
-    def check_visa_requirement(self) -> bool:
-        
+    def check_visa_requirement(self):
         print(f" Flight {self._flight_number} stays within New Zealand borders.")
         print(f" International visa checks not required")
         return False
