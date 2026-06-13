@@ -44,6 +44,15 @@ class TicTacToe:
             return "Draw"
         return None
 
+    def ask_play_again():
+        """Check: play another match."""
+    while True:
+        response = input("Do you want to play again? (y/n): ").strip().lower()
+        if response in ("y", "yes"):
+            return True
+        if response in ("n", "no"):
+            return False
+        print("Invalid response. Please enter 'y' or 'n'.")
 
 if __name__ == "__main__":
     game = TicTacToe()
@@ -66,3 +75,7 @@ if __name__ == "__main__":
             break
         game.swap_player()
         
+    # Check if the players want to restart or quit
+        if not ask_play_again():
+            print("Thanks for playing!")
+            break
