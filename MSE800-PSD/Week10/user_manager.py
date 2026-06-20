@@ -75,7 +75,7 @@ class UserManager:
         if result[0] != provided_hash:
             return False, "Incorrect security answer."
 
-        # Update operation sub-step
+        # Update operation
         new_password_hash = SecurityHelper.hash_data(new_password)
         update_query = (
             "UPDATE users SET password_hash = ? WHERE username = ?"
