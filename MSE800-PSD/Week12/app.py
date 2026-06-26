@@ -3,24 +3,19 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_flask():
-    return "<p> Hello Flask </p>"
-
-
-@app.route('/bye')
-def bye():
-    return "<p> Bye </p>"
-
-if __name__ == 'name':
-    app.run(debug=True)
-
-
-@app.route('/username/<name>')
-def learn(name):
-    return f"{name} is using Flask"\
-
-@app.route('/var/<name>/<int:number>')
-def two_var(name, number):
-    return f"{name} is using Flask with number {number}"
+    return """
+    <!DOCTYPE html>
+    <html style="background:green; color:red">
+    <head>
+        <title>Flask Website</title>
+    </head>
+    <body>
+    <h1>Welcome!</h1>
+    <p>Check out the documentation</p>
+    <a href="https://flask.palletsprojects.com/en/stable/quickstart/">Flask Quickstart Guide</a>
+    </body>
+    </html>
+    """
 
 if __name__ == 'name':
     app.run(debug=True)
